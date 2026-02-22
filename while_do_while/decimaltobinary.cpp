@@ -6,7 +6,8 @@ int main(){
   cout<< "enter a number to convert: "<<endl;
   cin>>number;
   while(number > 0){
-    remainder = number % 2;
+    remainder = number&1; /* it is as similar as number % 2; basically number will be
+    converted to binary then it will perform bitwise and with one. */
     binary = binary + remainder * place;
     place = place * 10;
     number /= 2;
