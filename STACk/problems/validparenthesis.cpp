@@ -18,8 +18,6 @@ bool validparent(string st){
     else if (isalpha(st[i])){
         continue;
     }
-    
-
 else {
     return false;
 }

@@ -127,7 +127,9 @@ vector<int> next_greater(vector<int> &arr){
     s.push(arr[arr.size()-1]);
     res[0] = -1;
     for(int i = arr.size()-1; i>= 0; i--){
+        int count = 1;
         while(!s.empty() && s.top()<=arr[i]){
+            count ++;
             s.pop();
         }
         if(s.empty()){
@@ -135,7 +137,7 @@ vector<int> next_greater(vector<int> &arr){
             s.push(arr[i]);
         }
         else{
-            res[i] = s.top();
+            res[i] = count;
             s.push(arr[i]);
         }
     }
